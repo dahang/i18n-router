@@ -245,7 +245,7 @@ import { I18NRouterModule } from '@nglibs/i18n-router';
 ### app.component configuration
 Import `I18NRouterService` using the mapping `'@nglibs/i18n-router'` and **inject** it in the constructor of **app.component** (*considering the app.component is the bootstrap component in Angular application*).
 
-Then, invoke the `init` method to initialize **`@nglibs/i18n-router`**.
+Then, invoke the `init` method to fetch **route translations** loaded during application initalization and allow the use of `'@nglibs/i18n-router'` by the **Angular** app.
 
 Lastly, you need to invoke the `changeLanguage` method by supplying the **2-letter language code**, which translates routes to the specified language.
 
@@ -261,8 +261,8 @@ import { I18NRouterService } from '@nglibs/i18n-router';
 export class AppComponent implements OnInit {
   ...
   constructor(private readonly i18nRouter: I18NRouterService) {
-    // providing false will won't init i18n-router,
-	// in the case you need to init i18n-router programmatically
+    // invoking the `init` method with false won't allow the use of i18n-router,
+	// would be handy in the case you need to use i18n-router programmatically
     i18nRouter.init();
   }
   ...
@@ -414,7 +414,7 @@ export function i18nRouterFactory(http: Http, rawRoutes: Routes): I18NRouterLoad
 
 The translations object is designed to contain **route translations** in every **language** supported by **Angular** application, in **JSON format**.
 
-When the `init` method of `@nglibs\i18n-router` is invoked, **route configuration** is **reset** based on the supplied translations.
+When the `changeLanguage` method of `@nglibs\i18n-router` is invoked, **route configuration** is **reset** based on the supplied translations.
 
 You should use the following **data structure** while working with the translation object:
 

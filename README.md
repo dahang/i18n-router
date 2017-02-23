@@ -51,7 +51,7 @@ npm install @nglibs/i18n-router --save
 ### `@nglibs` packages
 
 - [@nglibs/config]
-- [@nglibs/metadata]
+- [@nglibs/meta]
 - [@nglibs/i18n-router]
 - [@nglibs/i18n-router-config-loader]
 
@@ -619,7 +619,7 @@ Copyright (c) 2017 [Burak Tasci]
 [@nglibs]: https://github.com/nglibs
 [@nglibs/example-app]: https://github.com/nglibs/example-app
 [@nglibs/config]: https://github.com/nglibs/config
-[@nglibs/metadata]: https://github.com/nglibs/metadata
+[@nglibs/meta]: https://github.com/nglibs/meta
 [@nglibs/i18n-router]: https://github.com/nglibs/i18n-router
 [@nglibs/i18n-router-config-loader]: https://github.com/nglibs/i18n-router-config-loader
 [ng-router-loader]: https://github.com/shlomiassaf/ng-router-loader
